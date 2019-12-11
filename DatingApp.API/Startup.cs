@@ -33,6 +33,7 @@ namespace DatingApp.API
                 x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
             });
             services.AddControllers();
+            services.AddCors(); //makes the cors service available to use it as middleware
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +47,8 @@ namespace DatingApp.API
             // app.UseHttpsRedirection();
 
             app.UseRouting();
+            
+            app.UseCors(X => X.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
             app.UseAuthorization();
 
