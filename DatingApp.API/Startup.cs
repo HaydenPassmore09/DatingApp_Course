@@ -34,6 +34,7 @@ namespace DatingApp.API
             });
             services.AddControllers();
             services.AddCors(); //makes the cors service available to use it as middleware
+            services.AddScoped<IAuthRepository, AuthRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
