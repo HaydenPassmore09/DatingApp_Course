@@ -127,3 +127,11 @@ C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\obj\Debug\netcoreapp3.0\
 C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\obj\Debug\netcoreapp3.0\DatingApp.API.csproj.CopyComplete
 C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\obj\Debug\netcoreapp3.0\DatingApp.API.dll
 C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\obj\Debug\netcoreapp3.0\DatingApp.API.pdb
+C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
+C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
