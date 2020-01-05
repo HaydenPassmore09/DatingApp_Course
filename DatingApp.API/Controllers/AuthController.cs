@@ -33,11 +33,13 @@ namespace DatingApp.API.Controllers
         public async Task<IActionResult> Register(UserForRegisterDto userForRegisterDto)
         {
             userForRegisterDto.Username = userForRegisterDto.Username.ToLower();
-            if(await _repo.UserExists(userForRegisterDto.Username)){
+            if (await _repo.UserExists(userForRegisterDto.Username))
+            {
                 return BadRequest("Username already exists");
             }
 
-            var userToCreate = new User{
+            var userToCreate = new User
+            {
                 UserName = userForRegisterDto.Username
             };
 
@@ -49,12 +51,12 @@ namespace DatingApp.API.Controllers
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
-
             //First check if we have a user and their username and 
             //password matches what is stored in the database for that particular user
             var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
 
-            if(userFromRepo == null){
+            if (userFromRepo == null)
+            {
                 return Unauthorized();
             }
 
@@ -62,9 +64,9 @@ namespace DatingApp.API.Controllers
 
             //Our token will contain 2 claims one is going to be the users ID and the other is going to be the users username
             var claims = new[]{
-                new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
-                new Claim(ClaimTypes.Name, userFromRepo.UserName)
-            };
+                    new Claim(ClaimTypes.NameIdentifier, userFromRepo.Id.ToString()),
+                    new Claim(ClaimTypes.Name, userFromRepo.UserName)
+                };
 
             //In order to make sure that this toke is a valid token the server needs to sign the token
 
@@ -78,7 +80,8 @@ namespace DatingApp.API.Controllers
             //Create a token discripter passing our clams as the subject
             //setting the expiry date
             // then passing the signing credentials
-            var tokenDiscriptor = new SecurityTokenDescriptor{
+            var tokenDiscriptor = new SecurityTokenDescriptor
+            {
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.Now.AddDays(1),
                 SigningCredentials = creds
@@ -92,7 +95,8 @@ namespace DatingApp.API.Controllers
             var token = tokenHandler.CreateToken(tokenDiscriptor);
 
             //Write the token into the response that we send back to the client
-            return Ok(new {
+            return Ok(new
+            {
                 token = tokenHandler.WriteToken(token)
             });
         }
