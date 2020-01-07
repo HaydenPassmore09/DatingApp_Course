@@ -135,3 +135,4 @@ C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\
 C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\haydo\Documents\DatingApp_Course\DatingApp.API\bin\Debug\netcoreapp3.0\package-lock.json
