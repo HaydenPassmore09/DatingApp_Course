@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { environment } from 'src/environments/environment';
 
 @Injectable({ // Unlike a component where it is injectable by default we need to add this decorator
   providedIn: 'root'// this tells our service and any components that use this service which module
   // is providing this serive in this case its root (which is the app module)
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:5000/api/auth/';
+  private baseUrl = environment.apiUrl + 'auth/';
   jwtHelper  = new JwtHelperService();
   decodedToken: any;
 
