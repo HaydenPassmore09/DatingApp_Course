@@ -26,5 +26,14 @@ namespace DatingApp.API.Models.Data
         * Returns an individual user from our database given the user id
         */
         Task<User> GetUser(int id);
+        /*
+        * Returns an individual users photo given the photo id
+        */
+        Task<Photo> GetPhoto(int id);
+        /*
+        * Returns a users main photo given the users Id
+        */
+        Task<Photo> GetMainPhotoForUser(int userId);
+
     }
 }

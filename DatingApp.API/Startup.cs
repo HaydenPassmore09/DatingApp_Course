@@ -45,6 +45,7 @@ namespace DatingApp.API
             }
             );
             services.AddCors(); //makes the cors service available to use it as middleware
+            services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
             services.AddAutoMapper(typeof (DatingRepository).Assembly);
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IDatingRepository, DatingRepository>();
