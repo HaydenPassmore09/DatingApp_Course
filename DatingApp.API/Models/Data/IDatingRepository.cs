@@ -35,6 +35,10 @@ namespace DatingApp.API.Models.Data
         * Returns a users main photo given the users Id
         */
         Task<Photo> GetMainPhotoForUser(int userId);
+        /*
+        * Returns a like entity given the liker's userId and the likee's (recipientID), Returns null if the like doesn't exist
+        */
+        Task<Like> GetLike(int userId, int recipientId);
 
     }
 }
