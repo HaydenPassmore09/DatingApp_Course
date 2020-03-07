@@ -39,6 +39,15 @@ namespace DatingApp.API.Models.Data
         * Returns a like entity given the liker's userId and the likee's (recipientID), Returns null if the like doesn't exist
         */
         Task<Like> GetLike(int userId, int recipientId);
-
+        /*
+        * Returns a single message where the message id is equal to the id parameter passed into the methof
+        */
+        Task<Message> GetMessage(int id);
+        //TODO write method comment
+        Task<PagedList<Message>> GetMessagesForUser();
+        /*
+        * Returns a conversation between two users given the users ids
+        */
+        Task<IEnumerable<Message>> GetMessageThread(int userId, int recipientID);
     }
 }
