@@ -43,11 +43,13 @@ namespace DatingApp.API.Models.Data
         * Returns a single message where the message id is equal to the id parameter passed into the methof
         */
         Task<Message> GetMessage(int id);
-        //TODO write method comment
-        Task<PagedList<Message>> GetMessagesForUser();
+        /*
+        * Returns the inbox, outbox or unread messages given what is specified in the message params
+        */
+        Task<PagedList<Message>> GetMessagesForUser(MessageParams messageParams);
         /*
         * Returns a conversation between two users given the users ids
         */
-        Task<IEnumerable<Message>> GetMessageThread(int userId, int recipientID);
+        Task<IEnumerable<Message>> GetMessageThread(int userId, int recipientId);
     }
 }

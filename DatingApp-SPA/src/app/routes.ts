@@ -11,6 +11,7 @@ import { MemberEditComponent } from './members/member-edit/member-edit.component
 import { MemberEditResolver } from './_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from 'src/_guards/prevent-unsaved-changes.guard';
 import { ListResolver } from './_resolvers/lists.resolver';
+import { MessagesResolver } from './_resolvers/messages.resolver';
 
 /*
 * If any URL paths match the following then the user will be taken to the component
@@ -25,7 +26,7 @@ export const appRouts: Routes = [
         children: [ // All children routes in this class are protected by our auth guard see lecture 67
             { path: 'members', component: MemberListComponent, resolve: {users: MemberListResolver} },
             { path: 'members/:id', component: MemberDetailComponent, resolve: {user: MemberDetailResolver} },
-            { path: 'messages', component: MessagesComponent },
+            { path: 'messages', component: MessagesComponent, resolve: {messages: MessagesResolver}},
             { path: 'member/edit', component: MemberEditComponent, resolve:  {user: MemberEditResolver}, 
             canDeactivate: [PreventUnsavedChanges]},
             { path: 'lists', component: ListsComponent, resolve: {users: ListResolver} }
